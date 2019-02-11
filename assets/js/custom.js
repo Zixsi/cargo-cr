@@ -1,30 +1,3 @@
-/*
-| ----------------------------------------------------------------------------------
-| TABLE OF CONTENT
-| ----------------------------------------------------------------------------------
--SETTING
--Preloader
--Sticky Header
--Dropdown Menu Fade
--Menu Android
--Search Animation
--Disable Mobile Animated
--Animated Entrances
--Accordion
--Tooltips
--Chars Start
--Сustomization select
--Tooltip
--Zoom Images
--HOME SLIDER
--Slider thumbnails
--OWL Sliders
--Animated WOW
--Scroll Animation
-*/
-
-
-
 $(document).ready(function() {
 
     "use strict";
@@ -130,177 +103,21 @@ $(document).ready(function() {
 $( '.navbar-nav li:has(ul)' ).doubleTapToGo();
 
 
-
-/////////////////////////////////////
-//  Search Animation
-/////////////////////////////////////
-
-
-    $('#search-open, #search-close').on('click', function(e) {
-        e.preventDefault();
-        $('.header-search ').toggleClass('open-search');
-        $('.header-search').toggleClass('open');
-    });
-
-
-
 /////////////////////////////////////
 //  Disable Mobile Animated
 /////////////////////////////////////
 
     if (windowWidth < mobileWidth) {
-
         $("body").removeClass("animated-css");
-
     }
 
-
-        $('.animated-css .animated:not(.animation-done)').waypoint(function() {
-
-                var animation = $(this).data('animation');
-
-                $(this).addClass('animation-done').addClass(animation);
-
-        }, {
-                        triggerOnce: true,
-                        offset: '90%'
-        });
-
-
-
-//////////////////////////////
-// Animated Entrances
-//////////////////////////////
-
-
-
-    if (windowWidth > 1200) {
-
-        $(window).scroll(function() {
-                $('.animatedEntrance').each(function() {
-                        var imagePos = $(this).offset().top;
-
-                        var topOfWindow = $(window).scrollTop();
-                        if (imagePos < topOfWindow + 400) {
-                                        $(this).addClass("slideUp"); // slideUp, slideDown, slideLeft, slideRight, slideExpandUp, expandUp, fadeIn, expandOpen, bigEntrance, hatch
-                        }
-                });
-        });
-
-    }
-
-
-/////////////////////////////////////
-//  Search Animation
-/////////////////////////////////////
-
-
-    $(document).on("click", ".btn_header_search", function (event) {
-        event.preventDefault();
-        $(".search-form-modal").addClass("open");
+    $('.animated-css .animated:not(.animation-done)').waypoint(function() {
+            var animation = $(this).data('animation');
+            $(this).addClass('animation-done').addClass(animation);
+    }, {
+        triggerOnce: true,
+        offset: '90%'
     });
-    $(document).on("click", ".search-form_close", function (event) {
-        event.preventDefault();
-        $(".search-form-modal").removeClass("open");
-    });
-
-
-
-
-/////////////////////////////////////////////////////////////////
-// Accordion
-/////////////////////////////////////////////////////////////////
-
-    $(".btn-collapse").on('click', function () {
-            $(this).parents('.panel-group').children('.panel').removeClass('panel-default');
-            $(this).parents('.panel').addClass('panel-default');
-            if ($(this).is(".collapsed")) {
-                $('.panel-title').removeClass('panel-passive');
-            }
-            else {$(this).next().toggleClass('panel-passive');
-        };
-    });
-
-
-
-
-/////////////////////////////////////
-//  Tooltip
-/////////////////////////////////////
-
-
-    $('.link-tooltip-1').tooltip({
-    template: '<div class="tooltip tooltip-1" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
-  });
-    $('.link-tooltip-2').tooltip({
-    template: '<div class="tooltip tooltip-2" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
-  });
-
-
-/////////////////////////////////////
-//  Chars Start
-/////////////////////////////////////
-
-    if ($('body').length) {
-            $(window).on('scroll', function() {
-                    var winH = $(window).scrollTop();
-
-                    $('.list-progress').waypoint(function() {
-                            $('.chart').each(function() {
-                                    CharsStart();
-                            });
-                    }, {
-                            offset: '80%'
-                    });
-            });
-    }
-
-
-        function CharsStart() {
-            $('.chart').easyPieChart({
-                    barColor: false,
-                    trackColor: false,
-                    scaleColor: false,
-                    scaleLength: false,
-                    lineCap: false,
-                    lineWidth: false,
-                    size: false,
-                    animate: 7000,
-
-                    onStep: function(from, to, percent) {
-                            $(this.el).find('.percent').text(Math.round(percent));
-                    }
-            });
-
-        }
-
-
-
-/////////////////////////////////////////////////////////////////
-// Сustomization select
-/////////////////////////////////////////////////////////////////
-
-    $('.selectpicker').selectpicker();
-
-
-
-/////////////////////////////////////
-//  Tooltip
-/////////////////////////////////////
-
-
-    $('.link-tooltip').tooltip();
-
-
-
-/////////////////////////////////////
-//  Zoom Images
-/////////////////////////////////////
-
-
-    $(".prettyPhoto").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000});
-
-
 
 
 ////////////////////////////////////////////
@@ -342,158 +159,29 @@ $( '.navbar-nav li:has(ul)' ).doubleTapToGo();
 // Slider thumbnails
 ///////////////////////////////////////////
 
+    if ($('#slider-product').length > 0) {
 
-
-        if ($('#slider-product').length > 0) {
-
-                    // The slider being synced must be initialized first
-                    $('#carousel-product').flexslider({
-                        animation: "slide",
-                        controlNav: false,
-                        directionNav: false,
-                        animationLoop: false,
-                        slideshow: true,
-                        itemWidth: 84,
-                        itemMargin: 8,
-                        asNavFor: '#slider-product',
-                        direction: "vertical",
-                        smoothHeight: true
-                    });
-
-                    $('#slider-product').flexslider({
-                        animation: "slide",
-                        controlNav: false,
-                        animationLoop: false,
-                        slideshow: true,
-                        sync: "#carousel-product",
-                        smoothHeight: true
-                    });
-        }
-
-
-
-
-
-/////////////////////////////////////////////////////////////////
-// OWL Sliders
-/////////////////////////////////////////////////////////////////
-
-    var Core = {
-
-        initialized: false,
-
-        initialize: function() {
-
-                if (this.initialized) return;
-                this.initialized = true;
-
-                this.build();
-
-        },
-
-        build: function() {
-
-        // Owl Carousel
-
-            this.initOwlCarousel();
-        },
-        initOwlCarousel: function(options) {
-
-            $(".enable-owl-carousel").each(function(i) {
-                var $owl = $(this);
-
-                var itemsData = $owl.data('items');
-                var navigationData = $owl.data('navigation');
-                var paginationData = $owl.data('pagination');
-                var singleItemData = $owl.data('single-item');
-                var autoPlayData = $owl.data('auto-play');
-                var transitionStyleData = $owl.data('transition-style');
-                var mainSliderData = $owl.data('main-text-animation');
-                var afterInitDelay = $owl.data('after-init-delay');
-                var stopOnHoverData = $owl.data('stop-on-hover');
-                var min480 = $owl.data('min480');
-                var min768 = $owl.data('min768');
-                var min992 = $owl.data('min992');
-                var min1200 = $owl.data('min1200');
-
-                $owl.owlCarousel({
-                    navigation : navigationData,
-                    pagination: paginationData,
-                    singleItem : singleItemData,
-                    autoPlay : autoPlayData,
-                    transitionStyle : transitionStyleData,
-                    stopOnHover: stopOnHoverData,
-                    navigationText : ["<i></i>","<i></i>"],
-                    items: itemsData,
-                    itemsCustom:[
-                                    [0, 1],
-                                    [465, min480],
-                                    [750, min768],
-                                    [975, min992],
-                                    [1185, min1200]
-                    ],
-                    afterInit: function(elem){
-                                if(mainSliderData){
-                                        setTimeout(function(){
-                                                $('.main-slider_zoomIn').css('visibility','visible').removeClass('zoomIn').addClass('zoomIn');
-                                                $('.main-slider_fadeInLeft').css('visibility','visible').removeClass('fadeInLeft').addClass('fadeInLeft');
-                                                $('.main-slider_fadeInLeftBig').css('visibility','visible').removeClass('fadeInLeftBig').addClass('fadeInLeftBig');
-                                                $('.main-slider_fadeInRightBig').css('visibility','visible').removeClass('fadeInRightBig').addClass('fadeInRightBig');
-                                        }, afterInitDelay);
-                                    }
-                    },
-                    beforeMove: function(elem){
-                        if(mainSliderData){
-                                $('.main-slider_zoomIn').css('visibility','hidden').removeClass('zoomIn');
-                                $('.main-slider_slideInUp').css('visibility','hidden').removeClass('slideInUp');
-                                $('.main-slider_fadeInLeft').css('visibility','hidden').removeClass('fadeInLeft');
-                                $('.main-slider_fadeInRight').css('visibility','hidden').removeClass('fadeInRight');
-                                $('.main-slider_fadeInLeftBig').css('visibility','hidden').removeClass('fadeInLeftBig');
-                                $('.main-slider_fadeInRightBig').css('visibility','hidden').removeClass('fadeInRightBig');
-                        }
-                    },
-                    afterMove: sliderContentAnimate,
-                    afterUpdate: sliderContentAnimate,
+                // The slider being synced must be initialized first
+                $('#carousel-product').flexslider({
+                    animation: "slide",
+                    controlNav: false,
+                    directionNav: false,
+                    animationLoop: false,
+                    slideshow: true,
+                    itemWidth: 84,
+                    itemMargin: 8,
+                    asNavFor: '#slider-product',
+                    direction: "vertical",
+                    smoothHeight: true
                 });
-            });
 
-            function sliderContentAnimate(elem){
-                var $elem = elem;
-                var afterMoveDelay = $elem.data('after-move-delay');
-                var mainSliderData = $elem.data('main-text-animation');
-                if(mainSliderData){
-                    setTimeout(function(){
-                        $('.main-slider_zoomIn').css('visibility','visible').addClass('zoomIn');
-                        $('.main-slider_slideInUp').css('visibility','visible').addClass('slideInUp');
-                        $('.main-slider_fadeInLeft').css('visibility','visible').addClass('fadeInLeft');
-                        $('.main-slider_fadeInRight').css('visibility','visible').addClass('fadeInRight');
-                        $('.main-slider_fadeInLeftBig').css('visibility','visible').addClass('fadeInLeftBig');
-                        $('.main-slider_fadeInRightBig').css('visibility','visible').addClass('fadeInRightBig');
-                    }, afterMoveDelay);
-                }
-            }
-        },
-
-    };
-
-    Core.initialize();
-
-
+                $('#slider-product').flexslider({
+                    animation: "slide",
+                    controlNav: false,
+                    animationLoop: false,
+                    slideshow: true,
+                    sync: "#carousel-product",
+                    smoothHeight: true
+                });
+    }
 });
-
-
-/////////////////////////////////////
-//  Scroll Animation
-/////////////////////////////////////
-
-
-//window.sr = ScrollReveal({
- //       mobile:false,
-     //   reset:true
-   // });
-
-    //sr.reveal('.wow');
-
-
-
-    
