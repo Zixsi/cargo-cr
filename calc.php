@@ -1,5 +1,4 @@
-<?php/*
-<meta http-equiv='refresh' content='3; url=/about.html'>*/?>
+<meta http-equiv='refresh' content='3; url=/about.html'>
 <meta charset="UTF-8" />
 <?php
 include('inc/app.php');
@@ -28,8 +27,7 @@ try
 		throw new Exception('Защита от ботов не пройдена!', 1);
 	}
 
-	//$address = 'info-cr-group@yandex.ru';
-	$address = "zixxsi@gmail.com";
+	$address = 'info-cr-group@yandex.ru';
 	$sub = 'Рассчитать стоимость';
 
 	$mes = "Вес(кг)/Объём(м3): ".$_POST['value']."<br>\n
