@@ -51,7 +51,7 @@ function send_mail_attachment($mailTo, $From, $subject_text, $message, $files = 
 	$multipart .= chunk_split(base64_encode($message));   
 
 	#начало вставки файлов
-	if(isset($files["file"]))
+	if(is_array($files) && count($files) && isset($files["file"]["name"]))
 	{
 		foreach($files["file"]["name"] as $key => $value){
 			$filename = $files["file"]["tmp_name"][$key];
