@@ -16,7 +16,8 @@ if(isset($name) && isset($email) && isset($sub) && isset($body))
 		die();
 	}
 
-	$address = "info-cr-group@yandex.ru";
+	//$address = "info-cr-group@yandex.ru";
+	$address = "zixxsi@gmail.com";
 	$mes = "Имя: $name \nE-mail: $email \nТема: $sub \nТекст: $body";
 	$send = mail ($address,$sub,$mes,"Content-type:text/plain; charset = UTF-8\r\nFrom:$email");
 	if($send == 'true')
