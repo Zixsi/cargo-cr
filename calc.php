@@ -1,5 +1,6 @@
+<?php/*
 <meta http-equiv='refresh' content='3; url=/about.html'>
-<meta charset="UTF-8" />
+<meta charset="UTF-8" />*/?>
 <?php
 include('inc/app.php');
 
