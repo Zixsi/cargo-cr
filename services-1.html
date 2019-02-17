@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 	<meta name="description" content="">
-	<title>О нас</title>
+	<title>Услуги</title>
 	<link href="assets/css/master.css" rel="stylesheet">
 	<script src="assets/plugins/jquery/jquery-1.11.3.min.js"></script>
 	<script src="assets/js/modernizr.custom.js"></script>
@@ -103,6 +103,7 @@
 		</div>
 		
 		<div id="page-content">
+			<div id="vk_community_messages"></div>
 			<!-- CONTENT -->
 
 
@@ -123,81 +124,275 @@
 						<div class="row">
 							<div class="col-xs-12">
 								<div class="block-services-wrap">
-									<div class="block-services block-services_mod-a">
-										<img src="serv/1.jpg" width="250" height="">
+									<div class="block-services block-services_mod-a" data-toggle="modal" data-target="#service-1">
+										<div class="img-wrap">
+											<img src="serv/1.jpg" width="250" height="">
+										</div>
 										<h3 class="block-services__title ui-title-inner">АВИА ДОСТАВКА</h3>
 										<div class="decor-2 decor-2_mod-b"></div>
 										<div class="block-services__description"><h4>6-12 дней от 3,5 $/кг</h4></div>
 									</div>
-									<div class="block-services block-services_mod-a">
-										<img src="serv/2.jpg" width="250" height="">
-										<h3 class="block-services__title ui-title-inner">АВТО ДОСТАВКА </h3>
+									<div class="modal fade" id="service-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+												<h4 class="modal-title">АВИА ДОСТАВКА</h4>
+												</div>
+												<div class="modal-body">
+													<p>Описание</p>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+									<div class="block-services block-services_mod-a" data-toggle="modal" data-target="#service-2">
+										<div class="img-wrap">
+											<img src="serv/2.jpg" width="250" height="">
+										</div>
+										<h3 class="block-services__title ui-title-inner">АВТО ДОСТАВКА</h3>
 										<div class="decor-2 decor-2_mod-b"></div>
 										<div class="block-services__description"><h4>15-25 дней от 2,5 $/кг</h4></div>
 									</div>
-									<div class="block-services block-services_mod-a">
-										<img src="serv/3.jpg" width="250" height="">
+									<div class="modal fade" id="service-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+												<h4 class="modal-title">АВТО ДОСТАВКА</h4>
+												</div>
+												<div class="modal-body">
+													<p>Описание</p>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="block-services block-services_mod-a" data-toggle="modal" data-target="#service-3">
+										<div class="img-wrap">
+											<img src="serv/3.jpg" width="250" height="">
+										</div>
 										<h3 class="block-services__title ui-title-inner">Ж/Д ДОСТАВКА</h3>
 										<div class="decor-2 decor-2_mod-b"></div>
 										<div class="block-services__description"><h4>14-18 дней от 2,5 $/кг</h4></div>
 									</div>
-									<div class="block-services block-services_mod-a">
-										<img src="serv/4.jpg" width="250" height="">
+									<div class="modal fade" id="service-3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+												<h4 class="modal-title">Ж/Д ДОСТАВКА</h4>
+												</div>
+												<div class="modal-body">
+													<p>Описание</p>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="block-services block-services_mod-a" data-toggle="modal" data-target="#service-4">
+										<div class="img-wrap">
+											<img src="serv/4.jpg" width="250" height="">
+										</div>
 										<h3 class="block-services__title ui-title-inner">Оплата Поставщику</h3>
 										<div class="decor-2 decor-2_mod-b"></div>
 										<div class="block-services__description"><h4>от 3 %</h4></div>
 									</div>
-									<div class="block-services block-services_mod-a">
-										<img src="serv/5.jpg" width="250" height="">
+									<div class="modal fade" id="service-4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+												<h4 class="modal-title">Оплата Поставщику</h4>
+												</div>
+												<div class="modal-body">
+													<p>Описание</p>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="block-services block-services_mod-a" data-toggle="modal" data-target="#service-5">
+										<div class="img-wrap">
+											<img src="serv/5.jpg" width="250" height="">
+										</div>
 										<h3 class="block-services__title ui-title-inner">Поиск Поставщика</h3>
 										<div class="decor-2 decor-2_mod-b"></div>
 										<div class="block-services__description"><h4>200 $</h4></div>
 									</div>
-									<div class="block-services block-services_mod-a">
-										<img src="serv/6.jpg" width="250" height="">
+									<div class="modal fade" id="service-5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+												<h4 class="modal-title">Поиск Поставщика</h4>
+												</div>
+												<div class="modal-body">
+													<p>Описание</p>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="block-services block-services_mod-a" data-toggle="modal" data-target="#service-6">
+										<div class="img-wrap">
+											<img src="serv/6.jpg" width="250" height="">
+										</div>
 										<h3 class="block-services__title ui-title-inner">Аттестация Фабрики</h3>
 										<div class="decor-2 decor-2_mod-b"></div>
 										<div class="block-services__description"><h4>200 $</h4></div>
 									</div>
-									<div class="block-services block-services_mod-a">
-										<img src="serv/7.jpg" width="250" height="">
+									<div class="modal fade" id="service-6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+												<h4 class="modal-title">Аттестация Фабрики</h4>
+												</div>
+												<div class="modal-body">
+													<p>Описание</p>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="block-services block-services_mod-a" data-toggle="modal" data-target="#service-7">
+										<div class="img-wrap">
+											<img src="serv/7.jpg" width="250" height="">
+										</div>
 										<h3 class="block-services__title ui-title-inner">Контроль отгрузки</h3>
 										<div class="decor-2 decor-2_mod-b"></div>
 										<div class="block-services__description"><h4>200 $</h4></div>
 									</div>
-									<div class="block-services block-services_mod-a">
-										<img src="serv/8.jpg" width="250" height="">
+									<div class="modal fade" id="service-7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+												<h4 class="modal-title">Контроль отгрузки</h4>
+												</div>
+												<div class="modal-body">
+													<p>Описание</p>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="block-services block-services_mod-a" data-toggle="modal" data-target="#service-8">
+										<div class="img-wrap">
+											<img src="serv/8.jpg" width="250" height="">
+										</div>
 										<h3 class="block-services__title ui-title-inner">Контроль качества товара</h3>
 										<div class="decor-2 decor-2_mod-b"></div>
 										<div class="block-services__description"><h4>200 $</h4></div>
 									</div>
-									<div class="block-services block-services_mod-a">
-										<img src="serv/9.jpg" width="250" height="">
+									<div class="modal fade" id="service-8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+												<h4 class="modal-title">Контроль качества товара</h4>
+												</div>
+												<div class="modal-body">
+													<p>Описание</p>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="block-services block-services_mod-a" data-toggle="modal" data-target="#service-9">
+										<div class="img-wrap">
+											<img src="serv/9.jpg" width="250" height="">
+										</div>
 										<h3 class="block-services__title ui-title-inner">УПАКОВКА ТОВАРА</h3>
 										<div class="decor-2 decor-2_mod-b"></div>
 										<div class="block-services__description"><h4>Мешок+скотч 5 $/место</h4></div>
 									</div>
-									<div class="block-services block-services_mod-a">
-										<img src="serv/10.jpg" width="250" height="">
+									<div class="modal fade" id="service-9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+												<h4 class="modal-title">УПАКОВКА ТОВАРА</h4>
+												</div>
+												<div class="modal-body">
+													<p>Описание</p>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="block-services block-services_mod-a" data-toggle="modal" data-target="#service-10">
+										<div class="img-wrap img10">
+											<img src="serv/10.jpg" width="250" height="">
+										</div>
 										<h3 class="block-services__title ui-title-inner">УПАКОВКА ТОВАРА</h3>
 										<div class="decor-2 decor-2_mod-b"></div>
 										<div class="block-services__description"><h4>Деревянная обрешетка (+5-7 кг.) 50 $/м3</h4></div>
 									</div>
-									<div class="block-services block-services_mod-a">
-										<img src="serv/11.jpg" width="250" height="">
+									<div class="modal fade" id="service-10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+												<h4 class="modal-title">УПАКОВКА ТОВАРА</h4>
+												</div>
+												<div class="modal-body">
+													<p>Описание</p>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="block-services block-services_mod-a" data-toggle="modal" data-target="#service-11">
+										<div class="img-wrap">
+											<img src="serv/11.jpg" width="250" height="">
+										</div>
 										<h3 class="block-services__title ui-title-inner">УПАКОВКА ТОВАРА</h3>
 										<div class="decor-2 decor-2_mod-b"></div>
 										<div class="block-services__description"><h4>Фанерный ящик <br>(+10-11 кг.) 50 $/м3</h4></div>
 									</div>
-									<div class="block-services block-services_mod-a">
-										<img src="serv/12.jpg" width="250" height="">
+									<div class="modal fade" id="service-11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+												<h4 class="modal-title">УПАКОВКА ТОВАРА</h4>
+												</div>
+												<div class="modal-body">
+													<p>Описание</p>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="block-services block-services_mod-a" data-toggle="modal" data-target="#service-12">
+										<div class="img-wrap">
+											<img src="serv/12.jpg" width="250" height="">
+										</div>
 										<h3 class="block-services__title ui-title-inner">УПАКОВКА ТОВАРА</h3>
 										<div class="decor-2 decor-2_mod-b"></div>
 										<div class="block-services__description"><h4>Паллета<br>(+15-16 кг.) 35 $/шт.</h4></div>
 									</div>
+									<div class="modal fade" id="service-12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+												<h4 class="modal-title">УПАКОВКА ТОВАРА</h4>
+												</div>
+												<div class="modal-body">
+													<p>Описание</p>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
 								</div>
+								<a href="http://cr-logistics.ru/" target="_blank">Авиадоставка сборных грузов из Китая в Россию от 3,5$/кг</a>
 							</div>
-							<a href="http://cr-logistics.ru/" target="_blank">Авиадоставка сборных грузов из Китая в Россию от 3,5$/кг</a>
 						</div>
 					</div>
 				</div>

@@ -38,6 +38,7 @@
 	</script>
 	<noscript><div><img src="https://mc.yandex.ru/watch/51057077" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 	<!-- /Yandex.Metrika counter -->
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 	<!--<div id="page-preloader"><span class="spinner"></span></div>-->
@@ -102,7 +103,67 @@
 		</div>
 		
 		<div id="page-content">
+			<div id="vk_community_messages"></div>
 			<!-- CONTENT -->
+
+			<div class="container section-feedback-form">
+				<div class="row">
+					<div class="col-xs-12">
+						<h3 class="ui-title-block ui-title-block_mod-a">Рассчитать стоимость</h3>
+						<form action="calc.php" method="post" class="form">
+							<div class="row">
+								<div class="col-xs-12 col-md-6">
+									<div class="form-group">
+										<label>Вес(кг)/Объём(м3) (обязательно)</label>
+										<input type="text" name="value" value="" class="form-control">
+									</div>
+									<div class="form-group">
+										<label>Наименование товара (обязательно)</label>
+										<input type="text" name="name" value="" class="form-control">
+									</div>
+									<div class="form-group">
+										<label>Откуда/Куда(Китай-РФ)</label>
+										<input type="text" name="from_to" value="" class="form-control">
+									</div>
+									<div class="form-group">
+										<label>Ваше имя</label>
+										<input type="text" name="user_name" value="" class="form-control">
+									</div>
+								</div>
+								<div class="col-xs-12 col-md-6">
+									<div class="form-group">
+										<label>Контактный телефон</label>
+										<input type="text" name="phone" value="" class="form-control">
+									</div>
+									<div class="form-group">
+										<label>Электронная почта (обязательно)</label>
+										<input type="text" name="email" value="" class="form-control">
+									</div>
+									<div class="form-group">
+										<label>Сообщение</label>
+										<textarea class="form-control" name="message" rows="5"></textarea>
+									</div>
+									<div class="form-group">
+										<input type="file" name="file">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-md-6">
+									<div class="form-group">
+										<div class="g-recaptcha" data-sitekey="6LdTk5EUAAAAAOQhi8is7mjZ39XWRtj8C_4r73lC"></div>
+									</div>
+								</div>
+								<div class="col-xs-12 col-md-6">
+									<div class="form-group">
+										<button type="submit" class="btn btn-warning">Рассчитать</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
 
 			<section class="section_mod-e">
 				<div class="block-about">
