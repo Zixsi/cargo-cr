@@ -32,13 +32,13 @@ try
 	$address = "zixxsi@gmail.com";
 	$sub = 'Рассчитать стоимость';
 
-	$mes = "Вес(кг)/Объём(м3): ".$_POST['value']."\n
-	Наименование товара: ".$_POST['name']."\n
-	Откуда/Куда: ".$_POST['from_to']."\n
-	Имя: ".$_POST['user_name']."\n
-	Контактный телефон: ".$_POST['phone']."\n
-	Электронная почта: ".$_POST['email']."\n
-	Сообщение: ".$_POST['message']."\n";
+	$mes = "Вес(кг)/Объём(м3): ".$_POST['value']."<br>\n
+	Наименование товара: ".$_POST['name']."<br>\n
+	Откуда/Куда: ".$_POST['from_to']."<br>\n
+	Имя: ".$_POST['user_name']."<br>\n
+	Контактный телефон: ".$_POST['phone']."<br>\n
+	Электронная почта: ".$_POST['email']."<br>\n
+	Сообщение: ".$_POST['message']."<br>\n";
 
 	//if(mail($address, $sub, $mes, "Content-type:text/plain; charset = UTF-8\r\nFrom:".$_POST['email']))
 	if(send_mail_attachment($address, $_POST['email'], $sub, $mes, $_FILES))

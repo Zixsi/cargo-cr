@@ -51,20 +51,22 @@ function send_mail_attachment($mailTo, $From, $subject_text, $message, $files = 
 	$multipart .= chunk_split(base64_encode($message));   
 
 	#начало вставки файлов
-
-	foreach($files["file"]["name"] as $key => $value){
-		$filename = $files["file"]["tmp_name"][$key];
-		$file = fopen($filename, "rb");
-		$data = fread($file,  filesize( $filename ) );
-		fclose($file);
-		$NameFile = $files["file"]["name"][$key]; // в этой переменной надо сформировать имя файла (без всякого пути);
-		$File = $data;
-		$multipart .=  "$EOL--$boundary$EOL";   
-		$multipart .= "Content-Type: application/octet-stream; name=\"$NameFile\"$EOL";   
-		$multipart .= "Content-Transfer-Encoding: base64$EOL";   
-		$multipart .= "Content-Disposition: attachment; filename=\"$NameFile\"$EOL";   
-		$multipart .= $EOL; // раздел между заголовками и телом прикрепленного файла 
-		$multipart .= chunk_split(base64_encode($File));   
+	if(isset($files["file"]))
+	{
+		foreach($files["file"]["name"] as $key => $value){
+			$filename = $files["file"]["tmp_name"][$key];
+			$file = fopen($filename, "rb");
+			$data = fread($file,  filesize( $filename ) );
+			fclose($file);
+			$NameFile = $files["file"]["name"][$key]; // в этой переменной надо сформировать имя файла (без всякого пути);
+			$File = $data;
+			$multipart .=  "$EOL--$boundary$EOL";   
+			$multipart .= "Content-Type: application/octet-stream; name=\"$NameFile\"$EOL";   
+			$multipart .= "Content-Transfer-Encoding: base64$EOL";   
+			$multipart .= "Content-Disposition: attachment; filename=\"$NameFile\"$EOL";   
+			$multipart .= $EOL; // раздел между заголовками и телом прикрепленного файла 
+			$multipart .= chunk_split(base64_encode($File));   
+		}
 	}
 
 	#>>конец вставки файлов
