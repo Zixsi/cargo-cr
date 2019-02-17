@@ -30,7 +30,7 @@ function check_recaptcha()
 	return false;
 }
 
-function send_mail_attachment($mailTo, $From, $subject_text, $message, $files = [])
+function send_mail_attachment($mailTo, $From, $subject_text, $message, $files = array())
 {
 
 	$to = $mailTo;
