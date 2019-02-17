@@ -21,7 +21,8 @@ try
 		throw new Exception('Защита от ботов не пройдена!', 1);
 	}
 
-	$address = 'info-cr-group@yandex.ru';
+	//$address = 'info-cr-group@yandex.ru';
+	$address = "zixxsi@gmail.com";
 	$sub = 'Обратный звонок';
 	$mes = "Имя: ".$_POST['name']."\n Контактный телефон: ".$_POST['phone']."\n";
 

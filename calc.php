@@ -27,7 +27,8 @@ try
 		throw new Exception('Защита от ботов не пройдена!', 1);
 	}
 
-	$address = 'info-cr-group@yandex.ru';
+	//$address = 'info-cr-group@yandex.ru';
+	$address = "zixxsi@gmail.com";
 	$sub = 'Рассчитать стоимость';
 
 	$mes = "Вес(кг)/Объём(м3): ".$_POST['value']."\n
