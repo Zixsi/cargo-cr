@@ -53,6 +53,7 @@ function send_mail_attachment($mailTo, $From, $subject_text, $message, $files = 
 	#начало вставки файлов
 	if(is_array($files) && count($files) && isset($files["file"]["name"]))
 	{
+		var_dump($files);
 		foreach($files["file"]["name"] as $key => $value){
 			$filename = $files["file"]["tmp_name"][$key];
 			$file = fopen($filename, "rb");
