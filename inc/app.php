@@ -53,8 +53,19 @@ function send_mail_attachment($mailTo, $From, $subject_text, $message, $files = 
 	#начало вставки файлов
 	if(is_array($files) && count($files) && isset($files["file"]["name"]))
 	{
-		var_dump($files);
-		foreach($files["file"]["name"] as $key => $value){
+		if(!is_array($files["file"]["name"]))
+		{
+			$files["file"] = array(
+				'name' => array($files["file"]["name"]), 
+				'type' => array($files["file"]["type"]), 
+				'tmp_name' => array($files["file"]["tmp_name"]), 
+				'error' => array($files["file"]["error"]), 
+				'size' => array($files["file"]["size"])
+			);
+		}
+
+		foreach($files["file"]["name"] as $key => $value)
+		{
 			$filename = $files["file"]["tmp_name"][$key];
 			$file = fopen($filename, "rb");
 			$data = fread($file,  filesize( $filename ) );
